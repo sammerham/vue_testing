@@ -14,7 +14,13 @@ import { pokemonResponse } from "./components/__tests__/mockPokemon";
 
 export const restHandlers = [
   rest.get("https://pokeapi.co/api/v2/pokemon", (req, res, ctx) => {
-    return res(ctx.status(200), ctx.json(pokemonResponse));
+    return res(
+      ctx.status(200),
+      ctx.json(pokemonResponse)
+    );
+  }),
+  rest.get("*", (req, res, ctx) => {
+    console.error(`Please add request handler for ${req.url.toString()}`)
   }),
 ];
 const server = setupServer(...restHandlers);
