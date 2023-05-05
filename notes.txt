@@ -1,1 +1,6 @@
 https://github.com/ErikCH/Vitest-YT
+npm install msw --save-dev
+
+npm i -D whatwg-fetch msw
+
+https://mswjs.io/docs/getting-started/install

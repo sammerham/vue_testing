@@ -15,6 +15,7 @@
     async function getPokemon () {
        const res =  await axios.get("https://pokeapi.co/api/v2/pokemon");
        const data = res.data;
+       console.log(data);
        pokemons.value = data.results;
     };
 
